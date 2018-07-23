@@ -11,8 +11,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var itemsRouter = require('./routes/items')
 
-const dbuser = process.env.DB_USER
-const dbpass = process.env.DB_PASS
+// const dbuser = process.env.DB_USER
+// const dbpass = process.env.DB_PASS
+const dbuser = 'arief'
+const dbpass = '08november'
 mongoose.connect(`mongodb://${dbuser}:${dbpass}@ds247670.mlab.com:47670/ecommercedb`)
 
 var app = express();

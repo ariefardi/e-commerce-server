@@ -46,6 +46,25 @@ class Controller{
             })
         })
     }
+    static updateItem (req,res) {
+        let id = req.params.id
+        let obj = {
+            itemName: req.body.itemName,
+            price: req.body.price,
+            imgSrc: req.body.imgSrc,
+            brand: req.body.brand,
+            gender: req.body.gender,
+            released: req.body.released,
+            typeJersey: req.body.typeJersey
+        }
+        Model.findByIdAndUpdate(id,obj)
+        .then(updated=> {
+            res.json({
+                message: 'succesfully update',
+                updated
+            })
+        })
+    }
 }
 
 module.exports = Controller

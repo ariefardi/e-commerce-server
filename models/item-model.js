@@ -5,6 +5,10 @@ let itemSchema = Schema({
     itemName: String,
     price: Number,
     imgSrc: String,
+    brand: String,
+    gender: String,
+    released: String,
+    typeJersey: String
 },{timestamp: true})
 
 let Items = mongoose.model('Item',itemSchema)
